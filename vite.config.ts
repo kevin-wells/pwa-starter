@@ -23,7 +23,7 @@ export default defineConfig({
         enabled: true
       }
     })
-  ],
+  ]/*,
   server: {
     https: true,
     cors: false//{
@@ -31,5 +31,5 @@ export default defineConfig({
       //origin: 'https://localhost:7216/'
       //origin: 'https://kevin-wells.github.io'
     //}
-  }
+  }*/
 })

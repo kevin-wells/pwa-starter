@@ -73,14 +73,14 @@ export class AppHome extends LitElement {
     setInterval(() => {
       this.test = new Date().toString();
 
-      const request = new Request('https://localhost:7216/api/WeatherForecast'); // new Request('http://localhost:3000/');
-      fetch(request)
-        .then((response) => {
-          console.log(response);
-        })
-        .catch((err) => {
-          console.error(err);
-        });
+      // const request = new Request('https://localhost:7216/api/WeatherForecast'); // new Request('http://localhost:3000/');
+      // fetch(request)
+      //   .then((response) => {
+      //     console.log(response);
+      //   })
+      //   .catch((err) => {
+      //     console.error(err);
+      //   });
     }, 1000);
   }
 
