@@ -28,7 +28,8 @@ export default defineConfig({
     https: true,
     cors: {
       //origin: 'http://localhost:3000'
-      origin: 'https://localhost:7216/'
+      //origin: 'https://localhost:7216/'
+      origin: 'https://kevin-wells.github.io'
     }
   }
 })
