@@ -23,5 +23,12 @@ export default defineConfig({
         enabled: true
       }
     })
-  ]
+  ],
+  server: {
+    https: true,
+    cors: {
+      //origin: 'http://localhost:3000'
+      origin: 'https://localhost:7216/'
+    }
+  }
 })

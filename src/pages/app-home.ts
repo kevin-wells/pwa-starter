@@ -16,6 +16,8 @@ export class AppHome extends LitElement {
   // check out this link https://lit.dev/docs/components/properties/
   @property() message = 'Welcome!';
 
+  @property() test = "Test";
+
   static get styles() {
     return [
       styles,
@@ -67,6 +69,19 @@ export class AppHome extends LitElement {
 
   constructor() {
     super();
+
+    setInterval(() => {
+      this.test = new Date().toString();
+
+      const request = new Request('https://localhost:7216/api/WeatherForecast'); // new Request('http://localhost:3000/');
+      fetch(request)
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    }, 1000);
   }
 
   async firstUpdated() {
@@ -94,6 +109,7 @@ export class AppHome extends LitElement {
           <sl-card id="welcomeCard">
             <div slot="header">
               <h2>${this.message}</h2>
+              <h3>${this.test}</h3>
             </div>
 
             <p>
